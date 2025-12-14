@@ -1,0 +1,39 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f0fa;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #4a148c;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.materia {
+  padding: 10px;
+  border-radius: 10px;
+  background: #e1bee7;
+  cursor: pointer;
+  transition: 0.2s;
+  border-left: 6px solid #6a1b9a;
+}
+
+.materia.aprobada {
+  background: #b39ddb;
+  border-left-color: #311b92;
+}
+
+.materia.bloqueada {
+  background: #ede7f6;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.materia:hover:not(.bloqueada) {
+  transform: scale(1.03);
+}
